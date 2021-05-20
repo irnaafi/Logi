@@ -9,12 +9,14 @@ import (
 	"log"
 )
 
+
 func init() {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("error loading .env file")
 	}
 }
+
 
 func main() {
 	msgChan := make(chan *ckafka.Message)
